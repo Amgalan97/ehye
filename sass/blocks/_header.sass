@@ -1,0 +1,54 @@
+.navbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 26px 70px
+  &-wrapper
+    display: flex
+    align-items: center
+  &-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 506px
+    padding: 0
+    list-style-type: none
+    &__link
+      text-decoration: none
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: $primary
+      &:hover
+        color: $secondary
+  &__button
+    padding: 11px 22px
+    margin-left: 50px
+    border: 2px solid $secondary
+    filter: drop-shadow(0px 10px 25px rgba(21, 37, 72, 0.1))
+    border-radius: 8px
+    background: transparent
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    color: $secondary
+    cursor: pointer
+.menu
+  &-button
+    display: none
+
+  /* анимация верхней полоски */
+.first
+  transform: translate(4px, 0) rotate(45deg)
+  transform-origin: left top
+
+/* анимация средней полоски */
+.middle
+  display: none
+
+/* анимация нижней полоски */
+.last
+  transform: translate(-2px, -17px) rotate(-45deg)
+  transform-origin: right bottom
