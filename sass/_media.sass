@@ -1,6 +1,16 @@
 @media (max-width: 1200px)
   .container
     max-width: 1170px
+  .collection
+    &-wrapper
+      flex-direction: column
+      padding: 0 48px
+    &__description
+      max-width: 672px
+    &__text
+      margin-left: 0
+    &__title
+      margin-top: 40px
 @media (max-width: 992px)
   .container
     max-width: 960px
@@ -92,6 +102,13 @@
       margin-bottom: 41px
     &__item
       margin-right: 21px
+  .collection
+    padding-top: 40px
+    padding-bottom: 40px
+    &-wrapper
+      padding: 0 28px
+    &__description
+      margin-bottom: 24px
 @media (max-width: 576px)
   .logo
     width: 89px
@@ -108,11 +125,40 @@
     &__title
       font-size: 32px
       line-height: 40px
+    &__description
+      margin-bottom: 24px
+      font-size: 16px
+      line-height: 28px
     &__items
       justify-content: center
     &__item
       margin-bottom: 16px
-@media (max-width: 321px)
+  .collection
+    padding-top: 64px
+    padding-bottom: 55px
+    &__gallery
+      flex-direction: column
+    &__image
+      max-height: 150px
+      &:last-child
+        margin-left: 20px
+      &--big
+        max-width: 100%
+        max-height: 300px
+        margin-right: 0
+        margin-bottom: 20px
+    &__images
+      flex-direction: row
+    &__title
+      margin-top: 36px
+      margin-bottom: 20px
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+    &__description
+      font-size: 16px
+      line-height: 28px
+@media (max-width: 375px)
   body
     padding-top: 67px
   .container
@@ -148,3 +194,20 @@
     &__icon
       width: 24px
       height: 24px
+  .collection
+    &-wrapper
+      padding: 0
+    &__image
+      width: 138px
+      max-height: 97px
+      &:last-child
+        margin-left: 14px
+      &--big
+        width: 290px
+        max-height: 300px
+        margin-bottom: 14px
+    &__description
+      text-align: center
+      margin-bottom: 0px
+    &__link
+      display: none
