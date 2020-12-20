@@ -1,0 +1,94 @@
+.trends
+  padding-top: 70px
+  padding-bottom: 75px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 0 70px 48px 70px
+    margin: 0
+  &-tabs
+    display: flex
+    list-style-type: none
+    padding: 0
+    &__item
+      margin-left: 38px
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 25px
+      color: $text-color
+      cursor: pointer
+      &:first-child
+        margin-left: 0px
+      &:hover
+        color: $primary
+      &--active
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 25px
+        color: $primary
+  &__content
+    display: none
+    padding: 0 70px 0 75px
+    &--active
+      display: flex
+      justify-content: space-evenly
+      flex-wrap: wrap
+  &__card
+    display: flex
+    flex-direction: column
+    width: 260px
+    height: 441px
+    margin-bottom: 50px
+    &--last
+      display: flex
+      flex-direction: column
+      height: 350px
+      border-radius: 8px
+      overflow: hidden
+      background-color: $secondary
+      text-align: center
+  &__image
+    max-width: 260px
+    max-height: 350px
+    margin-bottom: 20px
+    border-radius: 8px
+    overflow: hidden
+  &__description
+    padding-left: 10px
+    margin-bottom: 3px
+    font-family: 'HKGrotesk-Bold'
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.2px
+    &--last
+      padding-left: 0px
+      margin-bottom: 0px
+      text-align: center
+      color: #fff
+  &__buy
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 10px
+  &__price
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    color: $text-color
+  &__icon
+    width: 23px
+    height: 32px
+    object-fit: contain
+    &--last
+      margin-top: 120px
+      margin-bottom: 21px
+      width: 28px
+      height: 37px
+      object-fit: contain
+  &__link
+    text-align: center
