@@ -4,6 +4,7 @@
   .collection
     &-wrapper
       flex-direction: column
+      align-items: center
       padding: 0 48px
     &__description
       max-width: 672px
@@ -11,6 +12,12 @@
       margin-left: 0
     &__title
       margin-top: 40px
+  .trends
+    &__content
+      &--active
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr
+        grid-template-areas: "Minimalist Luxury Full" "Pinky Holiday Swaggie" "Red Last ."
 @media (max-width: 992px)
   .container
     max-width: 960px
@@ -19,6 +26,15 @@
       width: 406px
     &__button
       margin-left: 20px
+  .reviews
+    &-slider
+      max-width: 700px
+  .trends
+    &__content
+      &--active
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr 1fr
+        grid-template-areas: "Minimalist Luxury" "Full Pinky" "Holiday Swaggie" "Red Last"
 @media (max-width: 768px)
   .container
     max-width: 728px
@@ -124,12 +140,44 @@
     &-tabs
       margin: 0 auto
     &__content
-      padding: 0 10px
+      padding: 0
+      &--active
+        grid-column-gap: 48px
+        grid-row-gap: 48px
     &__card
-      width: 280px
-      margin-bottom: 48px
+      max-width: 280px
+      margin: 0
+      &:nth-child(odd)
+        justify-self: end
+      &:nth-child(even)
+        justify-self: start
     &__image
       max-width: 280px
+  .reviews
+    padding-top: 41px
+    padding-bottom: 40px
+    &-slider
+      max-width: 630px
+  .swiper
+    &-pagination
+      bottom: -25px !important
+@media (max-width: 700px)
+  .collection
+    &__gallery
+      flex-direction: column
+    &__image
+      max-height: 150px
+      width: 50%
+      &:last-child
+        margin-left: 20px
+      &--big
+        width: 100%
+        max-width: 100%
+        max-height: 300px
+        margin-right: 0
+        margin-bottom: 20px
+    &__images
+      flex-direction: row
 @media (max-width: 576px)
   .logo
     width: 89px
@@ -157,21 +205,6 @@
   .collection
     padding-top: 64px
     padding-bottom: 55px
-    &__gallery
-      flex-direction: column
-    &__image
-      max-height: 150px
-      width: 50%
-      &:last-child
-        margin-left: 20px
-      &--big
-        width: 100%
-        max-width: 100%
-        max-height: 300px
-        margin-right: 0
-        margin-bottom: 20px
-    &__images
-      flex-direction: row
     &__title
       margin-top: 36px
       margin-bottom: 20px
@@ -195,7 +228,50 @@
         font-size: 16px
         line-height: 22px
     &__content
-      padding: 0
+      &--active
+        grid-column-gap: 24px
+        grid-row-gap: 24px
+    &__card
+      width: 180px
+      &--last
+        width: 180px
+        max-height: 250px
+    &__image
+      max-width: 180px
+      max-height: 250px
+    &__description
+      margin-bottom: 0
+      padding-left: 0px
+      font-size: 16px
+      line-height: 20px
+      &--last
+        font-size: 17px
+    &__price
+      margin-right: 9px
+      font-size: 14px
+      line-height: 24px
+    &__icon
+      width: 14px
+      height: 24px
+      &--last
+        width: 25px
+        height: 32px
+        margin-top: 40px
+        margin-bottom: 15px
+  .reviews
+    padding-top: 24px
+    padding-bottom: 32px
+    &-slider
+      max-width: 500px
+      &__quote
+        margin-bottom: 13px
+      &__icon
+        width: 70px
+        height: 81px
+      &__text
+        margin-bottom: 24px
+        font-size: 18px
+        line-height: 36px
 @media (max-width: 400px)
   body
     padding-top: 67px
@@ -256,10 +332,11 @@
       line-height: 20px
   .trends
     &-tabs
-      &__item
-        margin-left: 16px
+      width: 218px
     &__content
-      justify-content: space-between
+      &--active
+        grid-column-gap: 10px
+        grid-row-gap: 20px
     &__card
       width: 140px
       height: 234px
@@ -271,25 +348,12 @@
       max-width: 140px
       height: 170px
       object-fit: cover
-    &__description
-      margin-bottom: 0
-      padding-left: 0px
-      font-size: 16px
-      line-height: 20px
-      &--last
-        font-size: 17px
     &__buy
       padding: 0
       justify-content: start
-    &__price
-      margin-right: 9px
-      font-size: 14px
-      line-height: 24px
-    &__icon
-      width: 14px
-      height: 24px
-      &--last
-        width: 25px
-        height: 32px
-        margin-top: 40px
-        margin-bottom: 15px
+  .reviews
+    &-slider
+      max-width: 280px
+      &__name
+        max-width: 145px
+        margin: 0 auto

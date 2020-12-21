@@ -625,18 +625,19 @@ template {
 .trends-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px 48px 70px;
+  padding: 0 70px 48px 75px;
   margin: 0;
 }
 
 .trends-tabs {
   display: flex;
+  justify-content: space-between;
+  width: 285px;
   list-style-type: none;
   padding: 0;
 }
 
 .trends-tabs__item {
-  margin-left: 38px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -667,23 +668,56 @@ template {
 }
 
 .trends__content--active {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-template-areas: "Minimalist Luxury Full Pinky" "Holiday Swaggie Red Last";
 }
 
 .trends__card {
   display: flex;
   flex-direction: column;
-  width: 260px;
-  height: 441px;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  max-width: 260px;
+  max-height: 441px;
+}
+
+.trends__card:nth-child(1) {
+  grid-area: Minimalist;
+}
+
+.trends__card:nth-child(2) {
+  grid-area: Luxury;
+}
+
+.trends__card:nth-child(3) {
+  grid-area: Full;
+}
+
+.trends__card:nth-child(4) {
+  grid-area: Pinky;
+}
+
+.trends__card:nth-child(5) {
+  grid-area: Holiday;
+}
+
+.trends__card:nth-child(6) {
+  grid-area: Swaggie;
+}
+
+.trends__card:nth-child(7) {
+  grid-area: Red;
 }
 
 .trends__card--last {
+  grid-area: Last;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  width: 260px;
+  max-height: 350px;
   border-radius: 8px;
   overflow: hidden;
   background-color: #1565D8;
@@ -749,12 +783,79 @@ template {
   text-align: center;
 }
 
+.reviews {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.reviews-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-slider__quote {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.reviews-slider__icon {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.reviews-slider__text {
+  margin: 0;
+  margin-bottom: 28px;
+  font-family: 'HKGrotesk-Medium';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.133333px;
+}
+
+.reviews-slider__name {
+  margin: 0;
+  font-family: 'HKGrotesk-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-pagination {
+  bottom: -40px !important;
+  width: 47px;
+  height: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  margin: 0 8px !important;
+  background-color: #5A7184;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1170px;
   }
   .collection-wrapper {
     flex-direction: column;
+    align-items: center;
     padding: 0 48px;
   }
   .collection__description {
@@ -765,6 +866,11 @@ template {
   }
   .collection__title {
     margin-top: 40px;
+  }
+  .trends__content--active {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "Minimalist Luxury Full" "Pinky Holiday Swaggie" "Red Last .";
   }
 }
 
@@ -777,6 +883,14 @@ template {
   }
   .navbar__button {
     margin-left: 20px;
+  }
+  .reviews-slider {
+    max-width: 700px;
+  }
+  .trends__content--active {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "Minimalist Luxury" "Full Pinky" "Holiday Swaggie" "Red Last";
   }
 }
 
@@ -908,14 +1022,57 @@ template {
     margin: 0 auto;
   }
   .trends__content {
-    padding: 0 10px;
+    padding: 0;
+  }
+  .trends__content--active {
+    grid-column-gap: 48px;
+    grid-row-gap: 48px;
   }
   .trends__card {
-    width: 280px;
-    margin-bottom: 48px;
+    max-width: 280px;
+    margin: 0;
+  }
+  .trends__card:nth-child(odd) {
+    justify-self: end;
+  }
+  .trends__card:nth-child(even) {
+    justify-self: start;
   }
   .trends__image {
     max-width: 280px;
+  }
+  .reviews {
+    padding-top: 41px;
+    padding-bottom: 40px;
+  }
+  .reviews-slider {
+    max-width: 630px;
+  }
+  .swiper-pagination {
+    bottom: -25px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .collection__gallery {
+    flex-direction: column;
+  }
+  .collection__image {
+    max-height: 150px;
+    width: 50%;
+  }
+  .collection__image:last-child {
+    margin-left: 20px;
+  }
+  .collection__image--big {
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .collection__images {
+    flex-direction: row;
   }
 }
 
@@ -956,26 +1113,6 @@ template {
     padding-top: 64px;
     padding-bottom: 55px;
   }
-  .collection__gallery {
-    flex-direction: column;
-  }
-  .collection__image {
-    max-height: 150px;
-    width: 50%;
-  }
-  .collection__image:last-child {
-    margin-left: 20px;
-  }
-  .collection__image--big {
-    width: 100%;
-    max-width: 100%;
-    max-height: 300px;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .collection__images {
-    flex-direction: row;
-  }
   .collection__title {
     margin-top: 36px;
     margin-bottom: 20px;
@@ -1003,8 +1140,63 @@ template {
     font-size: 16px;
     line-height: 22px;
   }
-  .trends__content {
-    padding: 0;
+  .trends__content--active {
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+  .trends__card {
+    width: 180px;
+  }
+  .trends__card--last {
+    width: 180px;
+    max-height: 250px;
+  }
+  .trends__image {
+    max-width: 180px;
+    max-height: 250px;
+  }
+  .trends__description {
+    margin-bottom: 0;
+    padding-left: 0px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .trends__description--last {
+    font-size: 17px;
+  }
+  .trends__price {
+    margin-right: 9px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .trends__icon {
+    width: 14px;
+    height: 24px;
+  }
+  .trends__icon--last {
+    width: 25px;
+    height: 32px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  .reviews {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .reviews-slider {
+    max-width: 500px;
+  }
+  .reviews-slider__quote {
+    margin-bottom: 13px;
+  }
+  .reviews-slider__icon {
+    width: 70px;
+    height: 81px;
+  }
+  .reviews-slider__text {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 36px;
   }
 }
 
@@ -1083,11 +1275,12 @@ template {
     font-size: 14px;
     line-height: 20px;
   }
-  .trends-tabs__item {
-    margin-left: 16px;
+  .trends-tabs {
+    width: 218px;
   }
-  .trends__content {
-    justify-content: space-between;
+  .trends__content--active {
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
   }
   .trends__card {
     width: 140px;
@@ -1103,33 +1296,16 @@ template {
     height: 170px;
     object-fit: cover;
   }
-  .trends__description {
-    margin-bottom: 0;
-    padding-left: 0px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .trends__description--last {
-    font-size: 17px;
-  }
   .trends__buy {
     padding: 0;
     justify-content: start;
   }
-  .trends__price {
-    margin-right: 9px;
-    font-size: 14px;
-    line-height: 24px;
+  .reviews-slider {
+    max-width: 280px;
   }
-  .trends__icon {
-    width: 14px;
-    height: 24px;
-  }
-  .trends__icon--last {
-    width: 25px;
-    height: 32px;
-    margin-top: 40px;
-    margin-bottom: 15px;
+  .reviews-slider__name {
+    max-width: 145px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

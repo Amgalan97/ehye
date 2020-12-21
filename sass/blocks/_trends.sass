@@ -4,14 +4,15 @@
   &-wrapper
     display: flex
     justify-content: space-between
-    padding: 0 70px 48px 70px
+    padding: 0 70px 48px 75px
     margin: 0
   &-tabs
     display: flex
+    justify-content: space-between
+    width: 285px
     list-style-type: none
     padding: 0
     &__item
-      margin-left: 38px
       font-style: normal
       font-weight: normal
       font-size: 18px
@@ -32,19 +33,38 @@
     display: none
     padding: 0 70px 0 75px
     &--active
-      display: flex
-      justify-content: space-evenly
-      flex-wrap: wrap
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      grid-column-gap: 30px
+      grid-row-gap: 50px
+      grid-template-areas: "Minimalist Luxury Full Pinky" "Holiday Swaggie Red Last"
   &__card
     display: flex
     flex-direction: column
-    width: 260px
-    height: 441px
-    margin-bottom: 50px
+    margin: 0 auto
+    max-width: 260px
+    max-height: 441px
+    &:nth-child(1)
+      grid-area: Minimalist
+    &:nth-child(2)
+      grid-area: Luxury
+    &:nth-child(3)
+      grid-area: Full
+    &:nth-child(4)
+      grid-area: Pinky
+    &:nth-child(5)
+      grid-area: Holiday
+    &:nth-child(6)
+      grid-area: Swaggie
+    &:nth-child(7)
+      grid-area: Red
     &--last
+      grid-area: Last
       display: flex
       flex-direction: column
-      height: 350px
+      width: 260px
+      max-height: 350px
       border-radius: 8px
       overflow: hidden
       background-color: $secondary
