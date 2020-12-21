@@ -233,7 +233,7 @@
         grid-row-gap: 24px
     &__card
       width: 180px
-      &--last
+      &:last-child
         width: 180px
         max-height: 250px
     &__image
@@ -253,11 +253,11 @@
     &__icon
       width: 14px
       height: 24px
-      &--last
-        width: 25px
-        height: 32px
-        margin-top: 40px
-        margin-bottom: 15px
+    &__plus
+      width: 25px
+      height: 32px
+      margin-top: 40px
+      margin-bottom: 15px
   .reviews
     padding-top: 24px
     padding-bottom: 32px
@@ -341,7 +341,8 @@
       width: 140px
       height: 234px
       margin-bottom: 20px
-      &--last
+      &:last-child
+        width: 140px
         height: 170px
     &__image
       margin-bottom: 13px
