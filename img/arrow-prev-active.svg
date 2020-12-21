@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="54"
+   width="56"
    height="56"
-   viewBox="0 0 54 56"
+   viewBox="0 0 56 56"
    fill="none"
    version="1.1"
    id="svg6"
-   sodipodi:docname="arrow-prev-1.svg"
+   sodipodi:docname="arrow-next-1.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata12">
@@ -43,24 +43,24 @@
      id="namedview8"
      showgrid="false"
      inkscape:zoom="4.2142857"
-     inkscape:cx="27"
+     inkscape:cx="28"
      inkscape:cy="28"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg6" />
   <rect
-     x="-53"
+     x="-55"
      y="1"
-     width="52"
+     width="54"
      height="54"
-     rx="26"
+     rx="27"
      id="rect2"
      transform="scale(-1,1)"
-     style="stroke:#959ead;stroke-width:2" />
+     style="stroke:#183b56;stroke-width:2" />
   <path
-     d="m 26.6831,34.9375 c -0.3125,-0.3125 -0.2812,-0.7813 0,-1.0937 L 30.4644,30.25 h -9 c -0.4063,0 -0.75,-0.3125 -0.75,-0.75 v -1 c 0,-0.4062 0.3437,-0.75 0.75,-0.75 h 9 l -3.7813,-3.5625 c -0.2812,-0.3125 -0.3125,-0.7813 0,-1.0937 l 0.6875,-0.6876 c 0.2813,-0.2812 0.7813,-0.2812 1.0625,0 L 34.4956,28.5 c 0.3125,0.2812 0.3125,0.75 0,1.0312 l -6.0625,6.0938 c -0.2812,0.2812 -0.75,0.2812 -1.0625,0 z"
+     d="m 29.0625,23.0938 c 0.3125,0.3124 0.2813,0.7812 0,1.0937 L 25.2812,27.75 H 34.25 c 0.4375,0 0.75,0.3438 0.75,0.75 v 1 c 0,0.4375 -0.3125,0.75 -0.75,0.75 h -8.9688 l 3.7813,3.5938 c 0.2813,0.3124 0.2813,0.7812 0,1.0937 L 28.375,35.625 c -0.3125,0.2812 -0.7812,0.2812 -1.0625,0 l -6.0937,-6.0938 c -0.2813,-0.2812 -0.2813,-0.75 0,-1.0624 l 6.0937,-6.0626 c 0.2813,-0.2812 0.75,-0.2812 1.0625,0 z"
      id="path4"
      inkscape:connector-curvature="0"
-     style="fill:#959ead" />
+     style="fill:#183b56" />
 </svg>

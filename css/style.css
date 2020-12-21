@@ -961,8 +961,20 @@ template {
   background-size: contain;
 }
 
+.stories-slider__button--prev:active, .stories-slider__button--prev:focus {
+  background: url(../img/arrow-prev-active.svg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
 .stories-slider__button--next {
   background: url(../img/arrow-next.svg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.stories-slider__button--next:active, .stories-slider__button--next:focus {
+  background: url(../img/arrow-next-active.svg) no-repeat;
   background-position: center center;
   background-size: contain;
 }
