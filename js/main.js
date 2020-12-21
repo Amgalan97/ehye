@@ -19,13 +19,14 @@ $(document).ready(function () {
     $(this).addClass("trends-tabs__item--active");
   });
 
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
+      clickable: true,
     },
       autoplay: {
       delay: 7000,
@@ -37,8 +38,18 @@ $(document).ready(function () {
       effect: "flip",
   });
 
+  var mySwiper = new Swiper('.stories-slider', {
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.stories-slider__button--next',
+    prevEl: '.stories-slider__button--prev',
+  },
+})
+
   // Отключение автоплея при наведении
-  $(".swiper-container").hover(function() {
+  $(".reviews-slider").hover(function() {
       (this).swiper.autoplay.stop();
   }, function() {
       (this).swiper.autoplay.start();

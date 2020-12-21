@@ -18,6 +18,20 @@
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr
         grid-template-areas: "Minimalist Luxury Full" "Pinky Holiday Swaggie" "Red Last ."
+  .stories
+    &-wrapper
+      flex-direction: column
+      align-items: center
+    &-left
+      text-align: center
+    &__title
+      max-width: 100%
+    &__description
+      max-width: 568px
+    &-slider
+      &__buttons
+        margin: 0 auto
+        margin-bottom: 36px
 @media (max-width: 992px)
   .container
     max-width: 960px
@@ -145,14 +159,16 @@
         grid-column-gap: 48px
         grid-row-gap: 48px
     &__card
-      max-width: 280px
+      width: 280px
       margin: 0
+      &:last-child
+        width: 280px
       &:nth-child(odd)
         justify-self: end
       &:nth-child(even)
         justify-self: start
     &__image
-      max-width: 280px
+      width: 280px
   .reviews
     padding-top: 41px
     padding-bottom: 40px
@@ -161,6 +177,31 @@
   .swiper
     &-pagination
       bottom: -25px !important
+  .stories
+    &__line
+      width: 100%
+    &-wrapper
+      padding: 0
+      padding-top: 78px
+      padding-bottom: 40px
+    &__label
+      margin-bottom: 24px
+    &__title
+      margin-bottom: 16px
+    &__description
+      margin-bottom: 32px
+    &-slider
+      max-width: 682px
+      &__image
+        width: 322px
+      &__exposition
+        width: 322px
+      &__items
+        padding-top: 0
+        justify-content: center
+      &__item
+        width: 332px
+        height: 475px
 @media (max-width: 700px)
   .collection
     &__gallery
@@ -178,6 +219,34 @@
         margin-bottom: 20px
     &__images
       flex-direction: row
+  .trends
+    &__card
+      width: 200px
+      margin: 0
+      &:last-child
+        width: 200px
+        height: 270px
+    &__image
+      width: 200px
+      height: 270px
+    &__plus
+      width: 25px
+      height: 32px
+      margin-top: 70px
+      margin-bottom: 15px
+  .stories
+    &-wrapper
+      max-width: 500px
+      margin: 0 auto
+    &-slider
+      max-width: 500px
+      &__items
+        flex-direction: column
+        margin: 0
+      &__item
+        &:first-child
+          margin-right: 0
+          margin-bottom: 24px
 @media (max-width: 576px)
   .logo
     width: 89px
@@ -254,10 +323,7 @@
       width: 14px
       height: 24px
     &__plus
-      width: 25px
-      height: 32px
       margin-top: 40px
-      margin-bottom: 15px
   .reviews
     padding-top: 24px
     padding-bottom: 32px
@@ -272,6 +338,45 @@
         margin-bottom: 24px
         font-size: 18px
         line-height: 36px
+  .stories
+    &-wrapper
+      padding-top: 48px
+      padding-top: 20px
+      margin: 0 auto
+    &__label
+      padding: 2px 12px
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &__description
+      font-size: 16px
+      line-height: 28px
+      margin-bottom: 36px
+    &-slider
+      max-width: 280px
+      &__items
+        width: 280px
+        margin: 0 auto
+      &__item
+        width: 280px
+        height: 407px
+      &__image
+        width: 270px
+        height: 277px
+      &__exposition
+        padding: 20px 10px 20px 20px
+        width: 270px
+        max-height: 150px
+      &__text
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 16px
+      &__buttons
+        width: 112px
+        margin-bottom: 26px
+      &__button
+        width: 48px
+        height: 48px
 @media (max-width: 400px)
   body
     padding-top: 67px
@@ -340,7 +445,6 @@
     &__card
       width: 140px
       height: 234px
-      margin-bottom: 20px
       &:last-child
         width: 140px
         height: 170px

@@ -1,0 +1,85 @@
+.stories
+  padding-top: 53px
+  padding-bottom: 70px
+  &__line
+    border-top: 1px solid #E5EAF4
+    max-width: 90%
+    margin: 0 auto
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 0 65px
+    padding-top: 120px
+  &__label
+    margin-bottom: 28px
+  &__title
+    max-width: 337px
+    margin-bottom: 24px
+  &__description
+    max-width: 392px
+    margin-bottom: 48px
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    color: $text-color
+  &-slider
+    max-width: 662px
+    margin: 0
+    &__items
+      display: flex
+      align-items: center
+      padding-top: 10px
+    &__item
+      &:first-child
+        margin-right: 28px
+    &__image
+      width: 312px
+      height: 317px
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+      overflow: hidden
+    &__exposition
+      transform: translate(10px, -23px)
+      z-index: 99
+      width: 312px
+      max-height: 178px
+      padding: 20px
+      background: #FAFDFF
+    &__text
+      max-width: 260px
+      margin: 0
+      margin-bottom: 18px
+      font-family: 'HKGrotesk-Medium'
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+    &__link
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      text-decoration: none
+      color: $secondary
+    &__buttons
+      display: flex
+      justify-content: space-between
+      width: 130px
+    &__button
+      width: 54px
+      height: 56px
+      padding: 0
+      margin: 0
+      border: none
+      background: transparent
+      cursor: pointer
+      &--prev
+        background: url(../img/arrow-prev.svg) no-repeat
+        background-position: center center
+        background-size: contain
+      &--next
+        background: url(../img/arrow-next.svg) no-repeat
+        background-position: center center
+        background-size: contain

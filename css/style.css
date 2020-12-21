@@ -45,6 +45,19 @@ img {
   letter-spacing: 0.2px;
 }
 
+.label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(54, 179, 126, 0.1);
+  border-radius: 2000px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #36B37E;
+  text-transform: uppercase;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -472,16 +485,7 @@ template {
 }
 
 .hero__label {
-  display: inline-block;
-  padding: 6px 16px;
   margin-bottom: 28px;
-  background: rgba(54, 179, 126, 0.1);
-  border-radius: 2000px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  color: #36B37E;
 }
 
 .hero__title {
@@ -680,7 +684,7 @@ template {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 260px;
+  width: 260px;
   max-height: 441px;
 }
 
@@ -725,8 +729,8 @@ template {
 }
 
 .trends__image {
-  max-width: 260px;
-  max-height: 350px;
+  width: 260px;
+  height: 350px;
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
@@ -830,10 +834,6 @@ template {
   letter-spacing: 0.2px;
 }
 
-.swiper-container {
-  width: 100%;
-}
-
 .swiper-pagination {
   bottom: -40px !important;
   width: 47px;
@@ -847,6 +847,124 @@ template {
   height: 5px;
   margin: 0 8px !important;
   background-color: #5A7184;
+}
+
+.stories {
+  padding-top: 53px;
+  padding-bottom: 70px;
+}
+
+.stories__line {
+  border-top: 1px solid #E5EAF4;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.stories-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 65px;
+  padding-top: 120px;
+}
+
+.stories__label {
+  margin-bottom: 28px;
+}
+
+.stories__title {
+  max-width: 337px;
+  margin-bottom: 24px;
+}
+
+.stories__description {
+  max-width: 392px;
+  margin-bottom: 48px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #5A7184;
+}
+
+.stories-slider {
+  max-width: 662px;
+  margin: 0;
+}
+
+.stories-slider__items {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.stories-slider__item:first-child {
+  margin-right: 28px;
+}
+
+.stories-slider__image {
+  width: 312px;
+  height: 317px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.stories-slider__exposition {
+  transform: translate(10px, -23px);
+  z-index: 99;
+  width: 312px;
+  max-height: 178px;
+  padding: 20px;
+  background: #FAFDFF;
+}
+
+.stories-slider__text {
+  max-width: 260px;
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: 'HKGrotesk-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+}
+
+.stories-slider__link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #1565D8;
+}
+
+.stories-slider__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+}
+
+.stories-slider__button {
+  width: 54px;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.stories-slider__button--prev {
+  background: url(../img/arrow-prev.svg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.stories-slider__button--next {
+  background: url(../img/arrow-next.svg) no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 @media (max-width: 1200px) {
@@ -871,6 +989,23 @@ template {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "Minimalist Luxury Full" "Pinky Holiday Swaggie" "Red Last .";
+  }
+  .stories-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stories-left {
+    text-align: center;
+  }
+  .stories__title {
+    max-width: 100%;
+  }
+  .stories__description {
+    max-width: 568px;
+  }
+  .stories-slider__buttons {
+    margin: 0 auto;
+    margin-bottom: 36px;
   }
 }
 
@@ -1029,8 +1164,11 @@ template {
     grid-row-gap: 48px;
   }
   .trends__card {
-    max-width: 280px;
+    width: 280px;
     margin: 0;
+  }
+  .trends__card:last-child {
+    width: 280px;
   }
   .trends__card:nth-child(odd) {
     justify-self: end;
@@ -1039,7 +1177,7 @@ template {
     justify-self: start;
   }
   .trends__image {
-    max-width: 280px;
+    width: 280px;
   }
   .reviews {
     padding-top: 41px;
@@ -1050,6 +1188,40 @@ template {
   }
   .swiper-pagination {
     bottom: -25px !important;
+  }
+  .stories__line {
+    width: 100%;
+  }
+  .stories-wrapper {
+    padding: 0;
+    padding-top: 78px;
+    padding-bottom: 40px;
+  }
+  .stories__label {
+    margin-bottom: 24px;
+  }
+  .stories__title {
+    margin-bottom: 16px;
+  }
+  .stories__description {
+    margin-bottom: 32px;
+  }
+  .stories-slider {
+    max-width: 682px;
+  }
+  .stories-slider__image {
+    width: 322px;
+  }
+  .stories-slider__exposition {
+    width: 322px;
+  }
+  .stories-slider__items {
+    padding-top: 0;
+    justify-content: center;
+  }
+  .stories-slider__item {
+    width: 332px;
+    height: 475px;
   }
 }
 
@@ -1073,6 +1245,39 @@ template {
   }
   .collection__images {
     flex-direction: row;
+  }
+  .trends__card {
+    width: 200px;
+    margin: 0;
+  }
+  .trends__card:last-child {
+    width: 200px;
+    height: 270px;
+  }
+  .trends__image {
+    width: 200px;
+    height: 270px;
+  }
+  .trends__plus {
+    width: 25px;
+    height: 32px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+  }
+  .stories-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .stories-slider {
+    max-width: 500px;
+  }
+  .stories-slider__items {
+    flex-direction: column;
+    margin: 0;
+  }
+  .stories-slider__item:first-child {
+    margin-right: 0;
+    margin-bottom: 24px;
   }
 }
 
@@ -1174,10 +1379,7 @@ template {
     height: 24px;
   }
   .trends__plus {
-    width: 25px;
-    height: 32px;
     margin-top: 40px;
-    margin-bottom: 15px;
   }
   .reviews {
     padding-top: 24px;
@@ -1197,6 +1399,56 @@ template {
     margin-bottom: 24px;
     font-size: 18px;
     line-height: 36px;
+  }
+  .stories-wrapper {
+    padding-top: 48px;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  .stories__label {
+    padding: 2px 12px;
+  }
+  .stories__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .stories__description {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 36px;
+  }
+  .stories-slider {
+    max-width: 280px;
+  }
+  .stories-slider__items {
+    width: 280px;
+    margin: 0 auto;
+  }
+  .stories-slider__item {
+    width: 280px;
+    height: 407px;
+  }
+  .stories-slider__image {
+    width: 270px;
+    height: 277px;
+  }
+  .stories-slider__exposition {
+    padding: 20px 10px 20px 20px;
+    width: 270px;
+    max-height: 150px;
+  }
+  .stories-slider__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  .stories-slider__buttons {
+    width: 112px;
+    margin-bottom: 26px;
+  }
+  .stories-slider__button {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -1285,7 +1537,6 @@ template {
   .trends__card {
     width: 140px;
     height: 234px;
-    margin-bottom: 20px;
   }
   .trends__card:last-child {
     width: 140px;
