@@ -39,12 +39,11 @@ $(document).ready(function () {
   });
 
   var mySwiper = new Swiper('.stories-slider', {
-  loop: true,
-
   // Navigation arrows
   navigation: {
     nextEl: '.stories-slider__button--next',
     prevEl: '.stories-slider__button--prev',
+    disabledClass: 'stories-slider__button--disabled',
   },
 })
 

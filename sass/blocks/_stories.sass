@@ -1,6 +1,6 @@
 .stories
   padding-top: 53px
-  padding-bottom: 70px
+  padding-bottom: 117px
   &__line
     border-top: 1px solid #E5EAF4
     max-width: 90%
@@ -76,18 +76,20 @@
       background: transparent
       cursor: pointer
       &--prev
-        background: url(../img/arrow-prev.svg) no-repeat
+        background: url(../img/arrow-prev-active.svg) no-repeat
         background-position: center center
         background-size: contain
-        &:active, &:focus
-          background: url(../img/arrow-prev-active.svg) no-repeat
-          background-position: center center
-          background-size: contain
+        &.stories
+          &-slider
+            &__button
+              &--disabled
+                background: url(../img/arrow-prev.svg) no-repeat !important
       &--next
-        background: url(../img/arrow-next.svg) no-repeat
+        background: url(../img/arrow-next-active.svg) no-repeat
         background-position: center center
         background-size: contain
-        &:active, &:focus
-          background: url(../img/arrow-next-active.svg) no-repeat
-          background-position: center center
-          background-size: contain
+        &.stories
+          &-slider
+            &__button
+              &--disabled
+                background: url(../img/arrow-next.svg) no-repeat !important

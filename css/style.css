@@ -851,7 +851,7 @@ template {
 
 .stories {
   padding-top: 53px;
-  padding-bottom: 70px;
+  padding-bottom: 117px;
 }
 
 .stories__line {
@@ -956,27 +956,94 @@ template {
 }
 
 .stories-slider__button--prev {
-  background: url(../img/arrow-prev.svg) no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
-
-.stories-slider__button--prev:active, .stories-slider__button--prev:focus {
   background: url(../img/arrow-prev-active.svg) no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
+.stories-slider__button--prev.stories-slider__button--disabled {
+  background: url(../img/arrow-prev.svg) no-repeat !important;
+}
+
 .stories-slider__button--next {
-  background: url(../img/arrow-next.svg) no-repeat;
+  background: url(../img/arrow-next-active.svg) no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.stories-slider__button--next:active, .stories-slider__button--next:focus {
-  background: url(../img/arrow-next-active.svg) no-repeat;
+.stories-slider__button--next.stories-slider__button--disabled {
+  background: url(../img/arrow-next.svg) no-repeat !important;
+}
+
+.subscribe {
+  display: none;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url(../img/subscribe-bg.jpg) no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
+  background-color: #1565D8;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.subscribe__title {
+  margin: 0;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.subscribe__description {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.subscribe__form {
+  position: relative;
+  margin-right: 64px;
+}
+
+.subscribe__icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.subscribe__input {
+  width: 447px;
+  height: 56px;
+  border: 1px solid #C3CAD9;
+  border-radius: 8px;
+  padding-left: 48px;
+}
+
+.subscribe__button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  padding: 11px 27px;
+  background-color: #183B56;
+  border: none;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
@@ -1201,13 +1268,16 @@ template {
   .swiper-pagination {
     bottom: -25px !important;
   }
+  .stories {
+    padding-bottom: 0;
+  }
   .stories__line {
     width: 100%;
   }
   .stories-wrapper {
     padding: 0;
     padding-top: 78px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   .stories__label {
     margin-bottom: 24px;
@@ -1414,7 +1484,7 @@ template {
   }
   .stories-wrapper {
     padding-top: 48px;
-    padding-top: 20px;
+    padding-botttom: 40px;
     margin: 0 auto;
   }
   .stories__label {
@@ -1425,8 +1495,12 @@ template {
     line-height: 36px;
   }
   .stories__description {
+    max-width: 280px;
+    text-align: center;
     font-size: 16px;
     line-height: 28px;
+    padding-right: 0px;
+    margin: 0 auto;
     margin-bottom: 36px;
   }
   .stories-slider {
