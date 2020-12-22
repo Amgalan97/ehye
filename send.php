@@ -5,17 +5,15 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$email = $_POST["subscribe_email"];
+$email = $_POST["email"];
 
 
 // Формирование самого письмаиз блока newsletter
-if ($email) {
-  $title = "Подписка на новости Ehya";
+$title = "Подписка на новости Ehya";
   $body = "
     <h2>Подписка на новости</h2>
     <b>mail:</b> $email<br>
   ";
-}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -52,6 +50,4 @@ else {$result = "error";}
 }
 
 // Перенаправления на нужные страницы
-if ($email) {
-  header('Location: subscribe-thankyou.html');
-}
+header('Location: subscribe-thankyou.html');

@@ -484,6 +484,10 @@ template {
   overflow: hidden;
 }
 
+.hero-wrapper--thankyou {
+  background: none;
+}
+
 .hero__label {
   margin-bottom: 28px;
 }
@@ -953,12 +957,6 @@ template {
   color: #1565D8;
 }
 
-.stories-slider__buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 130px;
-}
-
 .stories-slider__button {
   width: 54px;
   height: 56px;
@@ -970,6 +968,7 @@ template {
 }
 
 .stories-slider__button--prev {
+  margin-right: 19px;
   background: url(../img/arrow-prev-active.svg) no-repeat;
   background-position: center center;
   background-size: contain;
@@ -1066,9 +1065,111 @@ template {
 
 label {
   position: absolute;
-  bottom: -40px;
+  top: -20px;
   left: 0;
   color: red;
+  font-size: 14px;
+}
+
+.footer {
+  padding-top: 128px;
+  padding-bottom: 132px;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 0 70px;
+}
+
+.footer-left {
+  margin-right: 29px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 45px;
+  grid-template-areas: "Navigation Service Company Contacts";
+}
+
+.footer__list--navigation {
+  grid-area: "Navigation";
+}
+
+.footer__list--service {
+  grid-area: "Service";
+}
+
+.footer__list--company {
+  grid-area: "Company";
+}
+
+.footer__list-contacts {
+  grid-area: "Contacts";
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.footer__description {
+  width: 263px;
+  margin: 0;
+  margin-bottom: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5A7184;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social__link {
+  text-decoration: none;
+}
+
+.footer-social__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 31px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.footer__ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  margin-bottom: 24px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5A7184;
+}
+
+.footer__link:hover {
+  color: #1565D8;
 }
 
 @media (max-width: 1200px) {
@@ -1107,13 +1208,23 @@ label {
   .stories__description {
     max-width: 568px;
   }
-  .stories-slider__buttons {
+  .stories-slider__button {
     margin: 0 auto;
     margin-bottom: 36px;
+  }
+  .stories-slider__button--prev {
+    margin-right: 19px;
   }
   .subscribe__form {
     margin-right: 0px;
     margin-left: 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 45px;
+    grid-row-gap: 24px;
+    grid-template-areas: "Navigation Service Company" "Contacts . .";
   }
 }
 
@@ -1144,6 +1255,11 @@ label {
   }
   .subscribe__form {
     margin-left: 0px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Navigation Service" "Contacts Company";
   }
 }
 
@@ -1225,6 +1341,9 @@ label {
     background-position: 60% center;
     background-size: cover;
     border-radius: 0;
+  }
+  .hero-wrapper--thankyou {
+    background: none;
   }
   .hero__label {
     margin-bottom: 24px;
@@ -1346,12 +1465,30 @@ label {
   }
   .subscribe {
     padding-top: 73px;
-    padding-bottom: 800px;
+    padding-bottom: 80px;
     background: url(../img/subscribe-bg-tablet.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
   .subscribe__description {
     max-width: 436px;
     text-align: center;
+  }
+  .footer {
+    padding-top: 64px;
+    padding-bottom: 130px;
+  }
+  .footer-left {
+    margin-right: 20px;
+  }
+  .footer-wrapper {
+    padding: 0 40px;
+  }
+  .footer__logo {
+    margin-bottom: 25px;
+  }
+  .footer__description {
+    margin-bottom: 28px;
   }
 }
 
@@ -1408,6 +1545,15 @@ label {
   .stories-slider__item:first-child {
     margin-right: 0;
     margin-bottom: 24px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-left {
+    order: 2;
+  }
+  .footer__link:hover {
+    color: #5A7184;
   }
 }
 
@@ -1576,13 +1722,13 @@ label {
     line-height: 24px;
     margin-bottom: 16px;
   }
-  .stories-slider__buttons {
-    width: 112px;
-    margin-bottom: 26px;
-  }
   .stories-slider__button {
+    margin-bottom: 26px;
     width: 48px;
     height: 48px;
+  }
+  .stories-slider__button--prev {
+    margin-right: 14px;
   }
   .subscribe {
     padding-top: 64px;
@@ -1622,6 +1768,9 @@ label {
     right: 0;
     transform: none;
   }
+  label {
+    top: -35px;
+  }
   .mobile-hidden {
     display: none;
   }
@@ -1639,10 +1788,18 @@ label {
     background-position: center center;
     background-size: cover;
   }
+  .hero--thankyou {
+    background: none;
+  }
   .hero-wrapper {
     padding: 381px 8px 18px 8px;
     background: none;
     text-align: center;
+  }
+  .hero-wrapper--thankyou {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: none;
   }
   .hero__label {
     margin-bottom: 20px;
@@ -1732,6 +1889,51 @@ label {
   }
   .reviews-slider__name {
     max-width: 145px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 73px;
+  }
+  .footer-wrapper {
+    padding: 0 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-row-gap: 15px;
+    grid-template-areas: "Navigation" "Service"  "Company" "Contacts";
+  }
+  .footer__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .footer__item {
+    margin-bottom: 15px;
+  }
+  .footer__link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .footer-left {
+    margin-top: 52px;
+    margin-right: 0px;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__logo {
+    margin: 0 auto;
+    margin-bottom: 11px;
+  }
+  .footer__description {
+    margin-bottom: 16px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .footer-social {
+    justify-content: center;
     margin: 0 auto;
   }
 }

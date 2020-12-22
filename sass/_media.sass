@@ -29,13 +29,22 @@
     &__description
       max-width: 568px
     &-slider
-      &__buttons
+      &__button
         margin: 0 auto
         margin-bottom: 36px
+        &--prev
+          margin-right: 19px
   .subscribe
     &__form
       margin-right: 0px
       margin-left: 20px
+  .footer
+    &-grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      grid-column-gap: 45px
+      grid-row-gap: 24px
+      grid-template-areas: "Navigation Service Company" "Contacts . ."
 @media (max-width: 992px)
   .container
     max-width: 960px
@@ -61,6 +70,11 @@
       margin-bottom: 56px
     &__form
       margin-left: 0px
+  .footer
+    &-grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      grid-template-areas: "Navigation Service" "Contacts Company"
 @media (max-width: 768px)
   .container
     max-width: 728px
@@ -129,6 +143,8 @@
       background-position: 60% center
       background-size: cover
       border-radius: 0
+      &--thankyou
+        background: none
     &__label
       margin-bottom: 24px
     &__title
@@ -217,11 +233,24 @@
         height: 475px
   .subscribe
     padding-top: 73px
-    padding-bottom: 800px
+    padding-bottom: 80px
     background: url(../img/subscribe-bg-tablet.jpg) no-repeat
+    background-position: center center
+    background-size: cover
     &__description
       max-width: 436px
       text-align: center
+  .footer
+    padding-top: 64px
+    padding-bottom: 130px
+    &-left
+      margin-right: 20px
+    &-wrapper
+      padding: 0 40px
+    &__logo
+      margin-bottom: 25px
+    &__description
+      margin-bottom: 28px
 @media (max-width: 700px)
   .collection
     &__gallery
@@ -267,6 +296,14 @@
         &:first-child
           margin-right: 0
           margin-bottom: 24px
+  .footer
+    &-wrapper
+      flex-direction: column
+    &-left
+      order: 2
+    &__link
+      &:hover
+        color: $text-color
 @media (max-width: 576px)
   .logo
     width: 89px
@@ -395,12 +432,12 @@
         font-size: 20px
         line-height: 24px
         margin-bottom: 16px
-      &__buttons
-        width: 112px
-        margin-bottom: 26px
       &__button
+        margin-bottom: 26px
         width: 48px
         height: 48px
+        &--prev
+          margin-right: 14px
   .subscribe
     padding-top: 64px
     padding-bottom: 64px
@@ -430,7 +467,8 @@
       top: 0
       right: 0
       transform: none
-
+  label
+    top: -35px
   .mobile-hidden
     display: none
 @media (max-width: 400px)
@@ -442,10 +480,16 @@
     background: url(../img/hero-bg--mobile.jpg) no-repeat
     background-position: center center
     background-size: cover
+    &--thankyou
+      background: none
     &-wrapper
       padding: 381px 8px 18px 8px
       background: none
       text-align: center
+      &--thankyou
+        padding-top: 40px
+        padding-bottom: 40px
+        background: none
     &__label
       margin-bottom: 20px
       padding: 2px 26px
@@ -518,3 +562,38 @@
       &__name
         max-width: 145px
         margin: 0 auto
+  .footer
+    padding-top: 48px
+    padding-bottom: 73px
+    &-wrapper
+      padding: 0 20px
+    &-grid
+      grid-template-columns: 1fr
+      grid-auto-rows: min-content
+      grid-row-gap: 15px
+      grid-template-areas: "Navigation" "Service"  "Company" "Contacts"
+    &__title
+      margin-bottom: 20px
+      font-size: 16px
+      line-height: 22px
+    &__item
+      margin-bottom: 15px
+    &__link
+      font-size: 14px
+      line-height: 20px
+    &-left
+      margin-top: 52px
+      margin-right: 0px
+      align-items: center
+      text-align: center
+    &__logo
+      margin: 0 auto
+      margin-bottom: 11px
+    &__description
+      margin-bottom: 16px
+      max-width: 100%
+      font-size: 14px
+      line-height: 24px
+    &-social
+      justify-content: center
+      margin: 0 auto
