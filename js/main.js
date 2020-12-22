@@ -53,4 +53,15 @@ $(document).ready(function () {
   }, function() {
       (this).swiper.autoplay.start();
   });
+
+  // Обработка форм
+  $(".subscribe__form").validate({
+    errorClass: "subscribe__error",
+    messages: {
+      email: {
+        required: "Введите ваш email",
+        email: "Введите корректный email в формате name@domain.com."
+        },
+      },
+    });
 });
