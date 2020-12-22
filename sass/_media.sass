@@ -32,6 +32,10 @@
       &__buttons
         margin: 0 auto
         margin-bottom: 36px
+  .subscribe
+    &__form
+      margin-right: 0px
+      margin-left: 20px
 @media (max-width: 992px)
   .container
     max-width: 960px
@@ -49,6 +53,14 @@
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr 1fr
         grid-template-areas: "Minimalist Luxury" "Full Pinky" "Holiday Swaggie" "Red Last"
+  .subscribe
+    &-wrapper
+      flex-direction: column
+    &-left
+      text-align: center
+      margin-bottom: 56px
+    &__form
+      margin-left: 0px
 @media (max-width: 768px)
   .container
     max-width: 728px
@@ -203,6 +215,13 @@
       &__item
         width: 332px
         height: 475px
+  .subscribe
+    padding-top: 73px
+    padding-bottom: 800px
+    background: url(../img/subscribe-bg-tablet.jpg) no-repeat
+    &__description
+      max-width: 436px
+      text-align: center
 @media (max-width: 700px)
   .collection
     &__gallery
@@ -342,7 +361,7 @@
   .stories
     &-wrapper
       padding-top: 48px
-      padding-botttom: 40px
+      padding-bottom: 64px
       margin: 0 auto
     &__label
       padding: 2px 12px
@@ -382,6 +401,38 @@
       &__button
         width: 48px
         height: 48px
+  .subscribe
+    padding-top: 64px
+    padding-bottom: 64px
+    &-wrapper
+      padding: 0
+    &-left
+      margin-bottom: 36px
+    &__title
+      margin-bottom: 24px
+      font-size: 28px
+      line-height: 36px
+    &__description
+      max-width: 280px
+      font-size: 16px
+      line-height: 28px
+    &__form
+      display: flex
+      flex-direction: column
+    &__icon
+      top: 25%
+    &__input
+      width: 280px
+      height: 48px
+      margin-bottom: 10px
+    &__button
+      position: static
+      top: 0
+      right: 0
+      transform: none
+
+  .mobile-hidden
+    display: none
 @media (max-width: 400px)
   body
     padding-top: 67px
